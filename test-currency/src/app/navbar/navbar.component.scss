@@ -1,0 +1,20 @@
+header {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    background-color: #2cd18c;
+    font-size: 32px;
+    padding: 10px;
+  }
+a {
+    color: azure;
+    text-decoration: none;
+    padding: 10px;
+    &:hover {
+        background-color: #37ac7b;
+    }
+  }
+  .container {
+    max-width: 1200;
+    margin: 0 auto;
+}
