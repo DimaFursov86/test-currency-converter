@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.fContainer {
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    border: 1px gray solid;
+    padding: 3px;
+    border-radius: 10px;
+}
+b {
+  font-size: 18px;  
+  color: rgb(48, 16, 231);
+  margin: 20px;
+}
