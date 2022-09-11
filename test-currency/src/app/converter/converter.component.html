@@ -1,9 +1,9 @@
 <div>
     <h2>Currency Converter</h2>
-    <input type="number" placeholder="amount" [(ngModel)]="amount">
+    <input type="number" placeholder="amount" [(ngModel)]='amount'>
     <div [ngClass]="{fContainer:true}">
         <label>From: {{from}}</label>
         <label>To: {{to}}</label>
      </div>
-    <b [style.color]="amount < 0 ? 'red': ''">{{amount.toFixed(2)}} {{from}} = {{convert().toFixed(2)}} {{to}}</b>
+    <b [style.color]="amount < 0 ? 'red': ''">{{amount}} {{from}} = {{convert().toFixed(2)}} {{to}}</b>
 </div>
