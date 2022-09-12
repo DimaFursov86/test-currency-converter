@@ -1,9 +1,50 @@
-<div>
-    <h2>Currency Converter</h2>
-    <input type="number" placeholder="amount" [(ngModel)]='amount'>
-    <div [ngClass]="{fContainer:true}">
-        <label>From: {{from}}</label>
-        <label>To: {{to}}</label>
-     </div>
-    <b [style.color]="amount < 0 ? 'red': ''">{{amount}} {{from}} = {{convert().toFixed(2)}} {{to}}</b>
+
+<div *ngIf="rates">
+    <div >
+        <table [ngClass]="{table:true}">
+        <thead [ngClass]="{table_label_container:true}">
+            <tr [ngClass]="{table_label_row:true}">
+            <th [ngClass]="{table_label_column:true}">Currency</th>
+            <th [ngClass]="{table_label_column:true}">Buy</th>
+            </tr>
+        </thead>
+        <tbody [ngClass]="{table_tbody:true}">
+           
+                <tr [ngClass]="{table_tbody_row:true}">
+                    <td >USD</td>
+                    <td >
+                        {{getUsd().toFixed(2)}}
+                    </td>
+                </tr>
+                <tr [ngClass]="{table_tbody_row:true}">
+                    <td >EUR</td>
+                    <td >
+                        {{getEur().toFixed(2)}}
+                    </td>
+                </tr>
+                <tr [ngClass]="{table_tbody_row:true}">
+                    <td >GBP</td>
+                    <td >
+                        {{getGbp().toFixed(2)}}
+                    </td>
+                </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div [ngClass]="{currencyCBox:true}">
+        <h2>Currency Converter</h2>
+        <input type="number" placeholder="amount" [(ngModel)]='amount'>
+        <div [ngClass]="{fContainer:true}">
+            <label>From:</label>
+            <select [(ngModel)]="from" (change)='loadRates()'>
+                <option *ngFor='let c of getAllCurrencies()' [value]="c">{{c}}</option>
+            </select>
+            <label>To: </label>
+            <select [(ngModel)]="to">
+                <option *ngFor='let c of getAllCurrencies()' [value]="c">{{c}}</option>
+            </select>
+        </div>
+        <b [style.color]="amount < 0 ? 'red': ''">{{amount}} {{from}} = {{convert().toFixed(2)}} {{to}}</b>
+    </div>
 </div>

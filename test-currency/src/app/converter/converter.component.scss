@@ -9,13 +9,82 @@
     display: flex;
     justify-content: space-between;
 }
-input {
+input, select {
     border: 1px gray solid;
     padding: 3px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 b {
   font-size: 18px;  
   color: rgb(48, 16, 231);
   margin: 20px;
 }
+
+table {
+    border-radius: 30px;
+    display: block;
+    width: 280px;
+    text-align: center;
+    color: #fff;
+    background-color: #4a56e2;
+   
+    border-spacing: 0px;
+    // overflow: hidden;
+    // position: relative;
+  
+    @media (min-width: 768px) {
+      width: 334px;
+    }
+    @media (min-width: 1280px) {
+      width: 348px;
+    }
+  }
+  .table_label_container {
+    display: block;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26.53px;
+  }
+  .table_label_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 30px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) -8.67%,
+      rgba(255, 255, 255, 0) 116.22%
+    );
+  }
+  tbody {
+    font-size: 18px;
+    line-height: 1.3;
+    display: block;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 22px;
+    padding-left: 35px;
+    padding-right: 35px;
+  
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1280px) {
+      padding-top: 20px;
+      padding-bottom: 149px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  .table_tbody_row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .table_tbody_row:not(:last-child) {
+    margin-bottom: 23px;
+  }
+  .currencyCBox {
+    width: 280px;
+    padding: 5px;
+    background-color: aqua;
+    border-radius: 30px;
+  }

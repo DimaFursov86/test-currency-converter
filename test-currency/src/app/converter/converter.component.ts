@@ -14,17 +14,36 @@ export class ConverterComponent implements OnInit {
   convert(): number{
     let result = 1;
     if (this.rates) {
-    return result = this.amount === null?1:this.amount * this.rates[this.to];
+    return result = this.amount * this.rates[this.to];
     };
     return result
   }
   loadRates(){
     this.service.getRates(this.from).subscribe(res => this.rates = res.rates)
   }
-  
+  getAllCurrencies(): string[]{
+    return Object.keys(this.rates);
+  }
+  getUsd(): number{
+    if (this.rates) {
+     return this.rates['USD'] * this.amount;
+    }
+    return 0;
+  }
+  getEur(): number{
+    if (this.rates) {
+     return this.rates['EUR'] * this.amount;
+    }
+    return 0;
+  }
+  getGbp(): number{
+    if (this.rates) {
+     return this.rates['GBP'] * this.amount;
+    }
+    return 0;
+  }
   constructor(private service: ExchangeRatesService) {
-    console.log( this.rates)
-    console.log( this.amount)
+   
    }
 
   ngOnInit(): void {
