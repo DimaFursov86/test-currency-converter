@@ -1,13 +1,13 @@
 :host {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    text-align: center;
-   
+    text-align: center; 
 }
 .fContainer {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 }
 input, select {
     border: 1px gray solid;
@@ -27,11 +27,13 @@ table {
     width: 280px;
     text-align: center;
     color: #fff;
-    background-color: #4a56e2;
-   
+    // background-color: #4a56e2;
+    background-image: linear-gradient(to right, #615fda,#5fad63,#615fda );
     border-spacing: 0px;
+    max-height: 260px;
     // overflow: hidden;
     // position: relative;
+    box-shadow: 0px 0px 69px 4px rgba(0,0,0,0.51);
   
     @media (min-width: 768px) {
       width: 334px;
@@ -50,11 +52,12 @@ table {
     display: flex;
     justify-content: space-between;
     padding: 17px 30px;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.2) -8.67%,
-      rgba(255, 255, 255, 0) 116.22%
-    );
+    // background: linear-gradient(
+    //   180deg,
+    //   rgba(255, 255, 255, 0.2) -8.67%,
+    //   rgba(255, 255, 255, 0) 116.22%
+    // );
+    background-image: linear-gradient(to bottom, #ffd8d0,#615fda,#ffd8d0 );
   }
   tbody {
     font-size: 18px;
@@ -83,8 +86,19 @@ table {
     margin-bottom: 23px;
   }
   .currencyCBox {
+    margin-top: 30px;
     width: 280px;
-    padding: 5px;
-    background-color: aqua;
+    display: block;
+    background-image: linear-gradient(to bottom, #229962, #ffd8d0,#229962);
     border-radius: 30px;
+    box-shadow: 0px 0px 69px 4px rgba(0,0,0,0.51);
+    @media (min-width: 768px) {
+        width: 334px;
+      }
+    @media (min-width: 1280px) {
+        width: 348px;
+      }
+  }
+  .currencyCText {
+    color: #4240d1;
   }

@@ -1,11 +1,6 @@
-.currency {
-    color: rgb(255, 123, 0);
-    font-weight: 400;
-  font-size: 150px;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
 }
-h1 {
-    color: blue;
-}
-// .currency {
-//     color: rgb(255, 123, 0);
-// }

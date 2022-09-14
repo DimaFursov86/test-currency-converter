@@ -33,7 +33,7 @@
     </div>
 
     <div [ngClass]="{currencyCBox:true}">
-        <h2>Currency Converter</h2>
+        <h2 [ngClass]="{currencyCText:true}">Currency Converter</h2>
         <input type="number" placeholder="amount" [(ngModel)]='amount'>
         <div [ngClass]="{fContainer:true}">
             <label>From:</label>
