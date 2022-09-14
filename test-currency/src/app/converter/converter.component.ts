@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ExchangeRatesService} from '../services/exchange-rates.service'
+import { NgxSpinnerService } from "ngx-spinner";
 @Component({
   selector: 'app-converter',
   templateUrl: './converter.component.html',
@@ -42,12 +43,19 @@ export class ConverterComponent implements OnInit {
     }
     return 0;
   }
-  constructor(private service: ExchangeRatesService) {
+  constructor(private service: ExchangeRatesService, private spinner: NgxSpinnerService) {
    
    }
 
   ngOnInit(): void {
+    // if (!this.rates) {
+      this.spinner.show();
+      
     this.loadRates();
+   
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 2000);
   }
 
 }
